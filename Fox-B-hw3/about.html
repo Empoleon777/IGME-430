@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar has-shadow is-white">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <i class="fas fa-headphones"></i>
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-start">
+                <a class="navbar-item has-text-weight-bold">
+                    About
+                </a>
+                <a class="navbar-item is-hoverable" href="index.html">
+                    App
+                </a>
+            </div>
+        </div> <!-- end navbar-start -->
+    </nav>
+
+
+    <div class="columns is-vcentered has-background-success">
+        <div class="column">
+            <div class="hero is-large is-primary p-2">
+                <div class="hero-head box has-background-info-dark">
+                    <p class="title is-size-2 is-vcentered">
+                        Audio Visualizer
+                    </p>
+                    <p class="subtitle is-vcentered">
+                        My creation for Homework Assignment 3.
+                    </p>
+                    <p class="rows">
+                        <img class="p-3" style="float:right;width:50%" src="./images/About Page.PNG" alt="dog">
+                    <p class="row has-text-white">
+                        In terms of the effect nodes, I reused the ones from the Web Audio exercise, while also adding
+                        in an allpass filter, a bandpass filter, and a peaking filter. I'm not sure if the last three
+                        actually work, though; I've tested them, and I'm not noticing a difference. Maybe I did these
+                        wrong because I spent so much time trying to get the Ogerpon gif working.
+                    </p>
+                    <p class="row has-text-white">
+                        The first sprite is called MovingCircle. This is just a circle that moves horizontally across
+                        the screen. I have the program generate tons of them, then pull values from the frequency data
+                        to dictate their speeds, then just warp them back to the left edge of the canvas once they reach
+                        the right edge. There is an input field that allows the user to change their size (Their radii
+                        start at 1 by default).
+                    </p>
+                    <p class="row has-text-white">
+                        The second sprite is called SoundWave. This is a white circle expanding from the center, its
+                        growth rate dictated by the frequency data.
+                    </p>
+                    <p class="row has-text-white">
+                        The JSON file contains the title of the program, all of the songs (I added a bunch of extra
+                        songs, all of which were actually written by me). I also included the drawing parameters in it.
+                    </p>
+                    <p class="row has-text-white">
+                        I would probably give myself a 0% for the aesthetics portion. I couldn't think of anything
+                        clever to do with the visual design, beyond reorganizing the layout in a way that may very well
+                        have just made it look worse. I mean, sure, I had the central sound wave and the background
+                        circles, but it still doesn't look all that different from the original in most ways, and the
+                        sound wave may very well DECREASE its visual quality. I tried to add a horizontally spinning
+                        Ogerpon gif, but I couldn't get that to work despite all my best efforts. That was probably my
+                        downfall, as I could have potentially added something else if I hadn't spent so much time trying
+                        to get this to work out.
+                    </p>
+                </div>
+                <div class="hero-footer">Contact: bcf7023@rit.edu</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/hamburger.js"></script>
+</body>
+
+</html>

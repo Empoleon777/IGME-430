@@ -1,0 +1,22 @@
+{
+  "name": "gifuct",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gifuct-js": "^1.0.0"
+  },
+  "main": "loader.js",
+  "devDependencies": {
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "keywords": [],
+  "description": ""
+}

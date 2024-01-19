@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Audio Visualizer</title>
+  <link href="styles/default-styles.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./dist/bundle.js" type="module"></script>
+</head>
+
+<body class="has-text-white">
+  <nav class="navbar has-shadow is-white">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <i class="fas fa-headphones"></i>
+      </a>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-start">
+        <a class="navbar-item is-hoverable" href="about.html">
+          About
+        </a>
+        <a class="navbar-item has-text-weight-bold">
+          App
+        </a>
+      </div>
+    </div> <!-- end navbar-start -->
+  </nav>
+
+  <main class="rows is-vcentered has-background-success">
+    <section class="row columns">
+      <section id="audio-controls" class="column box is-align-items-flex-end has-background-primary">
+        <h2 class="is-size-5 has-text-weight-bold is-uppercase pb-3">Audio Settings</h2>
+        <span><label for="cb-highshelf">Highshelf Filter (Treble)</label><input type="checkbox"
+            id="cb-highshelf"></span>
+        <span><label for="cb-lowshelf">Lowshelf Filter (Bass)</label><input type="checkbox" id="cb-lowshelf"></span>
+        <span><label for="cb-allpass">Allpass Filter</label><input type="checkbox" id="cb-allpass"></span>
+        <span><label for="cb-bandpass">Bandpass Filter</label><input type="checkbox" id="cb-bandpass"></span>
+        <span><label for="cb-peaking">Peaking Filter</label><input type="checkbox" id="cb-peaking"></span>
+        <span><label for="cb-distortion">Distortion</label><input type="checkbox" id="cb-distortion"></span>
+        <span>0 <input type="range" min="0" max="100" value="0" id="slider-distortion"> 100</span>
+      </section>
+
+      <div id="display" class="column box is-vcentered is-half has-background-info-dark pr-6">
+        <canvas width="800" height="600"></canvas>
+        <!-- <img src="images/ogerpon-pokemon.gif" alt="" style="display:none">    -->
+      </div>
+
+      <section id="visual-controls" class="column box is-align-items-flex-start has-background-primary">
+        <h2 class="is-size-5 has-text-weight-bold is-uppercase pb-3">Visual Settings</h2>
+        <button id="fs-button">Full Screen</button>
+        <span>
+          <input type="radio" id="bars" name="display-type" value="bars" checked>
+          <label for="bars">Bars</label><br>
+          <input type="radio" id="waveform" name="display-type" value="waveform">
+          <label for="waveform">Waveform</label><br>
+        </span>
+        <span><input type="checkbox" id="circles-cb" checked><label for="circles-cb">Show Circles</label></span>
+        <span><input type="checkbox" id="ogerpon-cb" checked><label for="ogerpon-cb">Show Spinning Ogerpon (Doesn't
+            work,
+            sadly)</label></span>
+        <span><input type="checkbox" id="invert-cb"><label for="invert-cb">Invert Colors</label></span>
+        <span><input type="checkbox" id="emboss-cb"><label for="emboss-cb">Show Emboss</label></span>
+        <span><input type="checkbox" id="b-circles-cb" checked><label for="b-circles-cb">Show Background
+            Circles</label></span>
+        <span><input type="checkbox" id="randomize-cb" checked><label for="randomize-cb">Randomize Background
+            Circles</label></span>
+        <span><label>Background Circle Size </label><input type="text" id="circles-input" value="1" size=5px></span>
+      </section>
+    </section>
+    <section id="play-and-select"
+      class="row is-flex-direction-column is-justify-content-flex-start is-align-items-center">
+      <audio controls src=""></audio>
+
+      <label class="is-size-5 has-text-weight-bold">Track:
+        <select id="track-select">
+
+        </select>
+      </label>
+    </section>
+  </main>
+
+  <script src="./dist/hamburger.js"></script>
+</body>
+
+</html>

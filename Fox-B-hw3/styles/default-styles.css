@@ -1,0 +1,72 @@
+body {
+  background: #eeeeee;
+  font-family: tahoma, verdana, sans serif;
+}
+
+canvas {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 8px #00000080;
+  background: #fafafa;
+  width: 100%;
+  height: 100%;
+}
+
+/* main {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 25% 50% 25%;
+  margin: 5px;
+  grid-template-areas:
+    "audio-controls display visual-controls"
+    "play-and-select play-and-select play-and-select";
+} */
+
+#display,
+#audio-controls,
+#visual-controls,
+#play-and-select {
+  display: flex;
+}
+
+#display,
+#audio-controls,
+#visual-controls{
+  flex-direction: column;
+}
+
+/* #display {
+  grid-area: display;
+} */
+
+/* #audio-controls {
+  grid-area: audio-controls;
+  align-items: end;
+  padding-right: 20px;
+}
+
+#visual-controls{
+  grid-area: visual-controls;
+  padding-left: 20px;
+}
+
+#play-and-select {
+  grid-area: play-and-select;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
+
+section {
+  margin-bottom: 1rem;
+}
+
+#fs-button {
+  font-size: 1.2rem;
+  width: 8rem;
+}
+
+#gif {
+  display: none;
+}
